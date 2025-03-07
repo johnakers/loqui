@@ -1,0 +1,33 @@
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Twitch Chat</title>
+    <script src="https://cdn.jsdelivr.net/npm/comfy.js@latest/dist/comfy.min.js"></script>
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <div id="chat">
+      <ul>
+        <li>clarissa: hello world</li>
+      </ul>
+    </div>
+  </body>
+  <script>
+
+    const chat = document.querySelector('#chat ul')
+
+    function Message(user, message) {
+      const li = document.createElement('li')
+      li.innerText = `${user}: ${message}`
+      return li
+    }
+
+    ComfyJS.onChat = (user, message, flags, self, extra) => {
+      chat.append(new Message(user, message))
+    }
+
+    ComfyJS.Init('tengille_')
+
+  </script>
+</html>
