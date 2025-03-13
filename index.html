@@ -18,12 +18,15 @@
     <div id="menu">
       <h3>Loqui</h3>
       <p style="font-size: 14px;">
-        A simple Twitch chat overlay. Enter a channel name and pick a theme. If you would like to
-        customize a theme, submit a pull request or download, add your CSS and run locally. Enjoy!
+        A simple Twitch chat overlay. In OBS...
       </p>
-      <p style="font-size: 14px;">
-        When the screen goes white, it is currently active. To reset, refresh the page.
-      </p>
+      <ol style="font-size: 14px; padding-left: 15px;">
+        <li>create a new browser source</li>
+        <li>link to this site</li>
+        <li>click "Interact" and enter the name of the stream, and which theme</li>
+        <li>hit "Run"</li>
+      </ol>
+
       <div class="label">Type the name of a Twitch channel</div>
       <br />
       <input type="text" id="channel" />
@@ -42,6 +45,10 @@
       <br />
       <br />
       <button type="submit" onclick="run()">Run</button>
+
+      <p style="font-size: 10px;">
+        <i>Some bugs still do exist, and the themes are just examples/works in progress... for now</i>
+      </p>
     </div>
 
     <div id="chat">
