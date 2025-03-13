@@ -1,33 +1,64 @@
+<!DOCTYPE html>
 <html>
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Twitch Chat</title>
-    <script src="https://cdn.jsdelivr.net/npm/comfy.js@latest/dist/comfy.min.js"></script>
-    <link rel="stylesheet" href="style.css">
+    <title>Loqui</title>
+
+    <!-- NOTE: don't delete this css file -->
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+
+    <!-- NOTE: pick a theme or make your own -->
+    <!-- <link rel="stylesheet" href="css/runescape.css"> -->
+    <!-- <link rel="stylesheet" href="css/cyberpunk.css"> -->
+    <!-- <link rel="stylesheet" href="css/finalfantasy.css"> -->
   </head>
   <body>
+    <div id="menu">
+      <h3>Loqui</h3>
+      <p style="font-size: 14px;">
+        A simple Twitch chat overlay. Enter a channel name and pick a theme. If you would like to
+        customize a theme, submit a pull request or download, add your CSS and run locally. Enjoy!
+      </p>
+      <p style="font-size: 14px;">
+        When the screen goes white, it is currently active. To reset, refresh the page.
+      </p>
+      <div class="label">Type the name of a Twitch channel</div>
+      <br />
+      <input type="text" id="channel" />
+      <br />
+      <br />
+      <div class="label">Select a theme</div>
+      <br />
+
+      <input type="radio" id="finalfantasy" name="theme" />
+      <label for="finalfantasy">Final Fantasy 7</label>
+      <input type="radio" id="runescape" name="theme" />
+      <label for="runescape">Runescape</label>
+      <input type="radio" id="cyberpunk" name="theme" />
+      <label for="cyberpunk">Cyberpunk</label>
+
+      <br />
+      <br />
+      <button type="submit" onclick="run()">Run</button>
+    </div>
+
     <div id="chat">
       <ul>
-        <li>clarissa: hello world</li>
+        <!-- <li>
+          <div class="user" style="color: purple;">tengille_</div><div class="message">this is an example message</div>
+        </li> -->
       </ul>
     </div>
   </body>
-  <script>
-
-    const chat = document.querySelector('#chat ul')
-
-    function Message(user, message) {
-      const li = document.createElement('li')
-      li.innerText = `${user}: ${message}`
-      return li
-    }
-
-    ComfyJS.onChat = (user, message, flags, self, extra) => {
-      chat.append(new Message(user, message))
-    }
-
-    ComfyJS.Init('tengille_')
-
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js"
+			    integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo="
+			    crossorigin="anonymous">
   </script>
+  <script src="https://cdn.jsdelivr.net/npm/comfy.js@latest/dist/comfy.min.js"></script>
+
+  <script src="js/lib/populateCaches.js"></script>
+  <script src="js/models/Message.js"></script>
+  <script src="js/main.js"></script>
 </html>

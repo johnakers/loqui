@@ -1,0 +1,39 @@
+/*
+
+NOTE:
+"theme" CSS files work by overwriting variables in main. You can
+use "main.css" as a reference to see what variables, classes, ids
+exist, but its better to make any changes here than in main.css.
+
+*/
+
+@font-face {
+  font-family: 'reacto7';
+  src: url('../fonts/reactor7/Reactor7.ttf');
+}
+
+html,
+body {
+  background-color: black;
+  font-family: 'reactor7';
+}
+
+#chat {
+  width: 300px;
+}
+
+#chat ul li {
+  background-color: var(--darkblue);
+  border: 2px solid var(--white);
+  border-radius: 10px;
+  color: var(--white);
+}
+
+#chat ul li .user {
+  margin-bottom: 5px;
+  text-shadow: 1px 1px var(--black);
+}
+
+#chat ul li.subscriber {
+  border-color: var(--cyan);
+}

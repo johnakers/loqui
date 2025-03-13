@@ -1,0 +1,96 @@
+:root {
+  --red: #FF0000;
+  --yellow: #FFFF00;
+  --green: #008000;
+  --blue: #0000FF;
+  --white: #FFFFFF;
+  --black: #000000;
+  --magenta: #FF00FF;
+  --cyan: #00FFFF;
+  --darkred: #8B0000;
+  --darkblue: #00008B;
+}
+
+@font-face {
+  font-family: 'Raleway';
+  src: url('../fonts/Raleway/Raleway-VariableFont_wght.ttf');
+}
+
+html,
+body {
+  background-color: var(--black);
+  color: var(--white);
+  font-family: 'Raleway';
+}
+
+.label {
+  font-size: 10px;
+}
+
+input,
+button {
+  font-family: 'Raleway';
+}
+
+button {
+  background-color: var(--cyan);
+  cursor: pointer;
+}
+
+#menu {
+  min-width: 600px;
+  width: 50vw;
+}
+
+#chat {
+  display: flex;
+  height: 100vh;
+  width: 200px;
+  overflow-y: auto;
+  flex-direction: column-reverse;
+  scrollbar-width: none;
+}
+
+/* NOTE: hides Scrollbar on Chrome, I think? */
+#chat::-webkit-scrollbar {
+  display: hidden;
+}
+
+#chat ul {
+  list-style-type: none;
+  list-style-position: outside;
+  margin: 0;
+  padding: 0;
+}
+
+#chat ul li {
+  background-color: var(--green);
+  border: 2px solid var(--darkred);
+  box-sizing: border-box;
+  color: var(--white);
+  font-family: monospace;
+  font-size: 12px;
+  margin-bottom: 10px;
+  padding: 1rem 10px;
+}
+
+#chat ul li.subscriber {
+  border-color: var(--yellow);
+}
+
+/* animations */
+@keyframes slide-in-left {
+  from {
+    transform: translateX(400px);
+    opacity: 0;
+  }
+
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+#chat li:last-of-type {
+  animation: bounce 0.3s;
+}

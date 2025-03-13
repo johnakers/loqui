@@ -1,0 +1,26 @@
+/*
+
+NOTE:
+"theme" CSS files work by overwriting variables in main. You can
+use "main.css" as a reference to see what variables, classes, ids
+exist, but its better to make any changes here than in main.css.
+
+*/
+
+@font-face {
+  font-family: 'rajdhani';
+  src: url('../fonts/Rajdhani/Rajdhani-Regular.ttf');
+}
+
+html,
+body {
+  font-family: 'rajdhani';
+}
+
+#chat ul li {
+  background-color: var(--darkred);
+  background-size: contain;
+  border: 4px solid var(--cyan);
+  color: var(--cyan);
+  text-shadow: 1px 1px var(--black);
+}

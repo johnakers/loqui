@@ -1,0 +1,28 @@
+/*
+
+NOTE: "theme" CSS files work by overwriting variables in main. You can
+use "main.css" as a reference to see what variables, classes, ids
+exist, but its better to make any changes here than in main.css.
+
+*/
+
+@font-face {
+  font-family: 'runescape-chat-07';
+  src: url('../fonts/runescape-chat-07/runescape-chat-07.ttf');
+}
+
+html,
+body {
+  font-family: 'runescape-chat-07';
+  color: var(--yellow);
+}
+
+#chat {
+  width: 300px;
+}
+
+#chat ul li {
+  background-color: grey;
+  border: 4px solid var(--yellow);
+  text-shadow: 1px 1px var(--black);
+}
