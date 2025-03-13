@@ -9,7 +9,7 @@ exist, but its better to make any changes here than in main.css.
 
 @font-face {
   font-family: 'rajdhani';
-  src: url('../fonts/Rajdhani/Rajdhani-Regular.ttf');
+  src: url('fonts/Rajdhani/Rajdhani-Regular.ttf');
 }
 
 html,

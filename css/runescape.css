@@ -8,7 +8,7 @@ exist, but its better to make any changes here than in main.css.
 
 @font-face {
   font-family: 'runescape-chat-07';
-  src: url('../fonts/runescape-chat-07/runescape-chat-07.ttf');
+  src: url('fonts/runescape-chat-07/runescape-chat-07.ttf');
 }
 
 html,

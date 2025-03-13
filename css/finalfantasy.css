@@ -9,7 +9,7 @@ exist, but its better to make any changes here than in main.css.
 
 @font-face {
   font-family: 'reacto7';
-  src: url('../fonts/reactor7/Reactor7.ttf');
+  src: url('fonts/reactor7/Reactor7.ttf');
 }
 
 html,
